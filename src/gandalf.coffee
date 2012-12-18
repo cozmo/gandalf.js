@@ -30,6 +30,9 @@
       $this = $(this)
       validators = $this.data(options.attribute)?.split(" ") or []
       validator_fns = []
+      errors.push
+        input: $this
+        errors: []
       for validator in validators
         continue if not !!validator
         matches = validator.match /([\w\-\_]+)\[(.*)\]/
@@ -40,9 +43,7 @@
       for fn in validator_fns
         fn $this.val(), (err) ->
           count++
-          errors.push
-            input: $this
-            error: err
+          errors[errors.length - 1].errors.push err if err
           if count is total_count
             options.callback(errors)
 ) jQuery

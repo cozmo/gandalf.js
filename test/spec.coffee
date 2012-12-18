@@ -52,7 +52,7 @@ describe "gandalf", ->
     window.jQuery("#default_validators input").gandalf(
       callback: (errors) ->
         for error in errors
-          if error.error
+          if error.errors.length isnt 0
             error.input.addClass "failed"
           else 
             error.input.addClass "passed"
@@ -69,7 +69,7 @@ describe "gandalf", ->
       attribute:"custom-validators"
       callback: (errors) ->
         for error in errors
-          if error.error
+          if error.errors.length isnt 0
             error.input.addClass "failed"
           else 
             error.input.addClass "passed"
@@ -95,7 +95,7 @@ describe "gandalf", ->
             cb err
         callback: (errors) ->
           for error in errors
-            if error.error
+            if error.errors.length isnt 0
               error.input.addClass "failed"
             else 
               error.input.addClass "passed"
