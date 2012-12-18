@@ -9,12 +9,16 @@
     "coffee-script": "~1.4.0"
   },
   "scripts": {
-    "test": "make -B test"
+    "test": "make -B test",
+    "build": "make -B build"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/Clever/gandalf.git"
   },
   "author": "Cosmo Wolfe",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "uglify-js": "~2.2.2"
+  }
 }
