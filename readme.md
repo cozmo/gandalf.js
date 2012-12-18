@@ -1,7 +1,7 @@
 #gandalf.js 
 “These forms shall not pass!”
 
-#Dead simple form validation library
+#Dead simple declarative form validation library
 gandalf.js was designed to do one thing and one thing only - Make sure the values in your inputs are what you need them to be. It makes no assumptions about the setup of the inputs. It takes a set of inputs, runs the defined validators against them, and calls a callback with the results. This allows for extreme flexibility in how you set up your forms. 
 
 ##Features

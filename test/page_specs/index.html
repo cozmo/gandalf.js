@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title></title>
+</head>
+<body>
+  <div id="exists"></div>
+  <input id="bad_validator" type="text" data-validators="bad[]" />
+  <div id="default_validators">
+    <h1>required:</h1>
+    <input type="text" value="" data-validators="required[]" class="fail" />
+    <input type="text" value="                 " data-validators="required[]" class="fail" />
+    <input type="text" value="foobar" data-validators="required[]" class="pass" />
+    <input type="text" value="      fff                   " data-validators="required[]" class="pass" />
+    <h1>length:</h1>
+    <input type="text" value="" data-validators="length[10]" class="fail" />
+    <input type="text" value="1234567890" data-validators="length[10]" class="pass" />
+    <h1>email:</h1>
+    <input type="text" value="" data-validators="email[]" class="fail" />
+    <input type="text" value="foo" data-validators="email[]" class="fail" />
+    <input type="text" value="foo@bar" data-validators="email[]" class="fail" />
+    <input type="text" value="foo@bar.com" data-validators="email[]" class="pass" />
+    <input type="text" value="long.email.with+special+chars@bar.museum" data-validators="email[]" class="pass" />
+  </div>
+  <div id="custom_attributes">
+    <input type="text" value="" data-custom-validators="required[]" class="fail" />
+    <input type="text" value="                 " data-custom-validators="required[]" class="fail" />
+    <input type="text" value="foobar" data-custom-validators="required[]" class="pass" />
+    <input type="text" value="      fff                   " data-custom-validators="required[]" class="pass" />
+  </div>
+  <div id="custom_validators">
+    <input type="text" value="foo" data-validators="is_foobar[]" class="fail" />
+    <input type="text" value="foobar" data-validators="is_foobar[]" class="pass" />
+  </div>
+</body>
+<script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../dist/gandalf.js"></script>
+</html>

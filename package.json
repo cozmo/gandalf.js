@@ -1,0 +1,20 @@
+{
+  "name": "gandalf",
+  "version": "0.0.1",
+  "description": "Dead simple declarative form validation library",
+  "main": "./dist/gandalf.js",
+  "devDependencies": {
+    "mocha": "~1.7.4",
+    "jsdom": "~0.3.2",
+    "coffee-script": "~1.4.0"
+  },
+  "scripts": {
+    "test": "make -B test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Clever/gandalf.git"
+  },
+  "author": "Cosmo Wolfe",
+  "license": "BSD"
+}
