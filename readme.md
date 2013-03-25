@@ -93,15 +93,13 @@ Validators are function factories, returning a function that takes 2 parameters 
 ```javascript
 $("input").gandalf({
   validators: {
-    {
-      is_number: function(number) {
-        return function(value, cb) {
-          var err = null;
-          if(value == number){
-            err = "The value is not " + number;
-          }
-          return cb(err);
-        };
+    is_number: function(number) {
+      return function(value, cb) {
+        var err = null;
+        if(value != number){
+          err = "The value is not " + number;
+        }
+        return cb(err);
       }
     }
   },callback: function(results) {
