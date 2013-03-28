@@ -144,7 +144,7 @@ npm run-script build
 ```
 
 - Source hosted at [GitHub](https://github.com/templaedhel/gandalf.js)
-- Report issues, questions, feature requests on [GitHub Issues](https://github.com/templaedhel//gandalf.js/issues)
+- Report issues, questions, feature requests on [GitHub Issues](https://github.com/templaedhel/gandalf.js/issues)
 
 Pull requests are welcome! Please ensure your patches are well tested. Please create seperate branches for seperate features/patches.
 
