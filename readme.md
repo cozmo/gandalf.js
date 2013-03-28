@@ -2,7 +2,7 @@
 “These forms shall not pass!”
 
 #Dead simple declarative form validation library
-gandalf.js was designed to do one thing and one thing only - Make sure the values in your inputs are what they need to be. It makes no assumptions about the setup of the inputs. It takes a set of inputs, runs the defined validators against them, and calls a callback with the results. This allows for extreme flexibility in how you setup and handle your forms.
+Gandalf.js was designed to do one thing and one thing only - Make sure the values in your inputs are what they need to be. It makes no assumptions about the setup of the inputs. It takes a set of inputs, runs the defined validators against them, and calls a callback with the results. This allows for extreme flexibility in how you setup and handle your forms.
 
 ##Features
 - Asynchronous from the ground up - gandalf was designed to be asynchronous, so it can handle any type of validation code you need.
@@ -17,7 +17,7 @@ Include script *after* the jQuery library (unless you are packaging scripts some
 ```
 
 ## Basic Usage
-gandalf is called on inputs with a data attribute specifying which validators to check the values against. When the validation has completed, it runs the passed callback.
+Gandalf is called on inputs with a data attribute specifying which validators to check the values against. When the validation has completed, it runs the passed callback.
 
 In the most simple usage gandalf is called on a set of inputs. It checks the value of the inputs againt the validator functions listed in the `data-validators` attributes. Validators are in the form `name[param,anothr_param,...]` and are seperated by spaces. Gandalf provides several default validators and you can provide custom validators as well. See [advanced usage](#advanced-usage) for more info.
 
@@ -143,8 +143,8 @@ After testing any changes, you can compile the production version by running
 npm run-script build
 ```
 
-- Source hosted at [GitHub](https://github.com/Clever/gandalf)
-- Report issues, questions, feature requests on [GitHub Issues](https://github.com/Clever/gandalf/issues)
+- Source hosted at [GitHub](https://github.com/templaedhel/gandalf.js)
+- Report issues, questions, feature requests on [GitHub Issues](https://github.com/templaedhel//gandalf.js/issues)
 
 Pull requests are welcome! Please ensure your patches are well tested. Please create seperate branches for seperate features/patches.
 
