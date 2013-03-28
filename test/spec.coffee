@@ -3,10 +3,6 @@ assert = require "assert"
 fs = require "fs"
 jsdom = require("jsdom").jsdom
 
-describe "gandalf", () ->
-  window = null
-  before = (done) ->
-    
 describe "gandalf", ->
   window = null
 
