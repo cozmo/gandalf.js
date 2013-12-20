@@ -15,13 +15,10 @@
           cb err
     options = $.extend true,{}, default_options, options
     return throw "gandalf.js expects a callback" if not options.callback? or typeof options.callback isnt "function"
-    if @length is 0
-      options.callback([])
-      return @
     errors = []
     count = 0
     total_count = 0
-    @each -> 
+    @each ->
       validators = $(this).data(options.attribute)?.split(" ") or []
       for validator in validators
         continue if not !!validator
@@ -40,6 +37,9 @@
         throw "gandalf.js couldn't find any validators with name '#{name}'" if not options.validators[name]?
         params = (matches[2].length and matches[2]?.split(',')) or []
         validator_fns.push options.validators[name].apply $this, params
+      if validator_fns.length is 0
+        options.callback([])
+        return @
       for fn in validator_fns
         fn $this.val(), (err) ->
           count++
