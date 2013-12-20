@@ -23,6 +23,9 @@
       for validator in validators
         continue if not !!validator
         total_count++
+    if total_count is 0
+      options.callback([])
+      return @
     @each ->
       $this = $(this)
       validators = $this.data(options.attribute)?.split(" ") or []
@@ -37,9 +40,6 @@
         throw "gandalf.js couldn't find any validators with name '#{name}'" if not options.validators[name]?
         params = (matches[2].length and matches[2]?.split(',')) or []
         validator_fns.push options.validators[name].apply $this, params
-      if validator_fns.length is 0
-        options.callback([])
-        return @
       for fn in validator_fns
         fn $this.val(), (err) ->
           count++
